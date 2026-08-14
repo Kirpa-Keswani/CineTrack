@@ -9,9 +9,11 @@ lerna-debug.log*
 
 node_modules
 dist
+.next
 dist-ssr
 *.local
 .env
+.env.local
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +25,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+legacy-vite
