@@ -1,0 +1,62 @@
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  background: rgba(10, 10, 12, 0.8);
+  color: var(--color-text);
+  backdrop-filter: blur(4px);
+  transition: color 0.2s, background 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.favorite-button:hover {
+  background: rgba(10, 10, 12, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.favorite-button--active {
+  color: #e74c6f;
+  border-color: rgba(231, 76, 111, 0.55);
+  background: rgba(231, 76, 111, 0.15);
+}
+
+.favorite-button__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.favorite-button--details {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.favorite-button--details .favorite-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.favorite-button--details .favorite-button__label {
+  color: var(--color-text);
+}
+
+.favorite-button--active.favorite-button--details {
+  background: rgba(231, 76, 111, 0.15);
+  border-color: rgba(231, 76, 111, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .favorite-button:hover {
+    transform: none;
+  }
+}

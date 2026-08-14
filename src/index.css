@@ -1,0 +1,126 @@
+:root {
+  --color-bg: #0a0a0c;
+  --color-bg-elevated: #141418;
+  --color-bg-card: #1c1c22;
+  --color-border: #2a2a32;
+  --color-text: #e8e8ed;
+  --color-text-muted: #9a9aa8;
+  --color-accent: #e8b923;
+  --color-accent-hover: #f5cc4d;
+  --color-accent-muted: rgba(232, 185, 35, 0.15);
+  --color-error: #f0a8a0;
+
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --max-width: 1200px;
+  --header-height: 64px;
+  --focus-ring: 0 0 0 3px var(--color-accent-muted);
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #0a0a0c;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.status-panel {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  border: 1px dashed var(--color-border);
+}
+
+.status-panel p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.status-panel--error p {
+  color: var(--color-error);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
