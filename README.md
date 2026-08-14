@@ -36,7 +36,7 @@ No Redux or additional state-management libraries are used. Favorites are manage
 ### Installation
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Kirpa-Keswani/CineTrack.git
 cd cinetrack
 npm install
 ```
