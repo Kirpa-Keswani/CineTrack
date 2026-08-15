@@ -10,3 +10,286 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* CineTrack AI */
+.cinetrack-ai {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.cinetrack-ai__header {
+  margin-bottom: 1rem;
+}
+
+.cinetrack-ai__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a78bfa;
+}
+
+.cinetrack-ai h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cinetrack-ai p {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+
+/* Messages area */
+.cinetrack-ai__messages {
+  height: 420px;
+  overflow-y: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  background: #020617;
+  scroll-behavior: smooth;
+}
+
+.cinetrack-ai__empty {
+  color: #94a3b8;
+}
+
+.cinetrack-ai__empty p {
+  margin-bottom: 0.75rem;
+}
+
+.cinetrack-ai__empty ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.cinetrack-ai__empty li {
+  margin-bottom: 0.5rem;
+}
+
+/* Individual messages */
+.cinetrack-ai__message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  margin-bottom: 1rem;
+}
+
+.cinetrack-ai__message--user {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.cinetrack-ai__message--assistant {
+  margin-right: auto;
+  align-items: flex-start;
+}
+
+.cinetrack-ai__label {
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.cinetrack-ai__bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.cinetrack-ai__message--user .cinetrack-ai__bubble {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.cinetrack-ai__message--assistant .cinetrack-ai__bubble {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+/* Thinking indicator */
+.cinetrack-ai__thinking {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cinetrack-ai__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  animation: cinetrack-pulse 1.2s infinite ease-in-out;
+}
+
+.cinetrack-ai__dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.cinetrack-ai__dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes cinetrack-pulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+/* Chat form */
+.cinetrack-ai__form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cinetrack-ai input,
+.cinetrack-ai textarea {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #475569;
+  border-radius: 0.5rem;
+  background: #1e293b;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.cinetrack-ai__form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.cinetrack-ai input::placeholder {
+  color: #94a3b8;
+}
+
+.cinetrack-ai input:focus,
+.cinetrack-ai textarea:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 1px;
+}
+
+.cinetrack-ai button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #7c3aed;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.cinetrack-ai button:hover {
+  background: #6d28d9;
+}
+
+.cinetrack-ai button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Stop button */
+.cinetrack-ai__stop {
+  background: #dc2626 !important;
+}
+
+.cinetrack-ai__stop:hover {
+  background: #b91c1c !important;
+}
+
+/* Jump to latest */
+.cinetrack-ai__jump {
+  display: block;
+  margin: 0.75rem auto 0;
+  background: #334155 !important;
+}
+
+.cinetrack-ai__jump:hover {
+  background: #475569 !important;
+}
+
+/* Screen-reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cinetrack-ai {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .cinetrack-ai h2 {
+    font-size: 1.25rem;
+  }
+
+  .cinetrack-ai__messages {
+    height: 360px;
+    padding: 0.75rem;
+  }
+
+  .cinetrack-ai__message {
+    max-width: 92%;
+  }
+
+  .cinetrack-ai__form {
+    gap: 0.5rem;
+  }
+
+  .cinetrack-ai__form input {
+    min-width: 0;
+  }
+
+  .cinetrack-ai__form button {
+    flex-shrink: 0;
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cinetrack-ai__messages {
+    scroll-behavior: auto;
+  }
+
+  .cinetrack-ai__dot {
+    animation: none;
+  }
+
+  .cinetrack-ai button {
+    transition: none;
+  }
+}
